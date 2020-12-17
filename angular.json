@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-app": {
+    "sso-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,14 +17,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/my-app",
+            "outputPath": "dist/sso-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/favicon.ico",
+              "src/assets/images/favicon.ico",
               "src/assets"
             ],
             "styles": [
@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "my-app:build"
+            "browserTarget": "sso-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "my-app:build:production"
+              "browserTarget": "sso-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "my-app:build"
+            "browserTarget": "sso-app:build"
           }
         },
         "test": {
@@ -87,7 +87,7 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-              "src/favicon.ico",
+              "src/assets/images/favicon.ico",
               "src/assets"
             ],
             "styles": [
@@ -113,18 +113,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "my-app:serve"
+            "devServerTarget": "sso-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "my-app:serve:production"
+              "devServerTarget": "sso-app:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "my-app",
+  "defaultProject": "sso-app",
   "cli": {
     "analytics": "dc0e0fc7-13fb-482a-b03a-515d519b2ea9"
   }
